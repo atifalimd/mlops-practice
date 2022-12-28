@@ -15,8 +15,8 @@ dirs =[
 
 for dir in dirs:
     os.makedirs(dir,exist_ok=True)
-    #if exist_ok is set to True, it will check whether dir is created,if not created will create and 
-    # when re run will not through an error.
+#exist_ok=True-->if the dir is not created will create and if it is created will simply ignore
+#exist_ok=False-->if the dir is not created will create and and if it is created will throw error'''
     with open(os.path.join(dir,".gitkeep"), 'w') as f:
     #it will create all the .gitkeep file inside all dirs
         pass
