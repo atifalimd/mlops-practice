@@ -6,7 +6,9 @@ dirs =[
     os.path.join("data","processed"), # data is directory and processed is folder
     "notebooks", # notebook is directory
     "saved_models", # saved_model is directory
-    "src" # src is directory
+    "src",# src is directory
+    "Data_given" # get the data from the cloud or resouce
+
 ]
 
 # add required directories to the project
