@@ -8,4 +8,6 @@ conda create -n venv3.7 python=3.7 -y
 Add all the required libraries and install them using command
 pip install -r requirements.txt
 
+3. Create template.py 
+
 
