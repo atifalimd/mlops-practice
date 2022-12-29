@@ -12,3 +12,9 @@ pip install -r requirements.txt
 In template.py create required directories and required files of the project
 
 4. Dataset loaded at data_given directory manually
+
+5. git init
+
+6. dvc init
+
+7. dvc add data_given\winequality.csv
