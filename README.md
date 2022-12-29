@@ -1,6 +1,6 @@
 # mlops-practice
 Steps of MLOPS
-
+Creating a Setup:
 1. Create suitable venv
 conda create -n venv3.7 python=3.7 -y
 
@@ -23,6 +23,7 @@ In template.py create required directories and required files of the project
    git add . && git commit -m "<message>"
    git push (from) origin (to) main
 
-Main operation starts from here
-steps:
+Main operation steps:
 1. Params.yaml file
+Define all the parameters to run this project
+2.dvc.yaml file
