@@ -22,3 +22,7 @@ In template.py create required directories and required files of the project
    To push changes in repository 
    git add . && git commit -m "<message>"
    git push (from) origin (to) main
+
+Main operation starts from here
+steps:
+1. Params.yaml file
