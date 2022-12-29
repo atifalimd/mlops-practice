@@ -11,4 +11,4 @@ pip install -r requirements.txt
 3. Create template.py
 In template.py create required directories and required files of the project
 
-Dataset loaded at data_given directory manually
+4. Dataset loaded at data_given directory manually
