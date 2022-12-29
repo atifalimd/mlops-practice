@@ -18,3 +18,7 @@ In template.py create required directories and required files of the project
 6. dvc init
 
 7. dvc add data_given\winequality.csv (To track the data)
+
+   To push changes in repository 
+   git add . && git commit -m "<message>"
+   git push (from) origin (to) main
