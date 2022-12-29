@@ -26,4 +26,5 @@ In template.py create required directories and required files of the project
 Main operation steps:
 1. Params.yaml file
 Define all the parameters to run this project
+2. create get_data.py in src dir
 2.dvc.yaml file
