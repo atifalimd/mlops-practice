@@ -27,4 +27,7 @@ Main operation steps:
 1. Params.yaml file
 Define all the parameters to run this project
 2. create get_data.py in src dir
-2.dvc.yaml file
+3. create load_data.py in src dir
+4. dvc.yaml file
+define stage -01(load_dataset) and run using command dvc repro
+all the changes will be updated in dvc.lock file
