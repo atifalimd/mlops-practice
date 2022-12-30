@@ -31,3 +31,5 @@ Define all the parameters to run this project
 4. dvc.yaml file
 define stage -01(load_dataset) and run using command dvc repro
 all the changes will be updated in dvc.lock file
+5. create split_data.py for stage-02
+
