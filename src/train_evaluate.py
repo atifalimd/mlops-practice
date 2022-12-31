@@ -15,7 +15,7 @@ import argparse
 import joblib
 import json
 
-def eval_matrics(actual,pred):
+def eval_metrics(actual,pred):
     rmse = np.sqrt(mean_squared_error(actual,pred))
     mae = mean_absolute_error(actual,pred)
     r2 = r2_score(actual,pred)
@@ -47,12 +47,31 @@ def train_evaluate(config_path):
     lr.fit(train_x,train_y)
 
     predicted_quality = lr.predict(test_x)
-    rmse, mae, r2 = eval_matrics(test_y, predicted_quality)
+    rmse, mae, r2 = eval_metrics(test_y, predicted_quality)
 
     print("Elasticnet model alpha={}, l1_ratio={}".format(alpha, l1_ratio))
     print('RMSE:{}'.format(rmse))
     print('MAE:{}'.format(mae))
     print('R2 Score:{}'.format(r2))
+
+    params_file = config["reports"]["params"]
+    scores_file = config["reports"]["scores"]
+
+    with open(scores_file, "w") as f:
+        scores = {
+            "rmse": rmse,
+            "mae": mae,
+            "r2": r2
+        }
+        json.dump(scores,f,indent=4)
+    
+    with open(params_file, "w") as f:
+        params = {
+            "alpha": alpha,
+            "l1_ratio": l1_ratio
+        }
+        json.dump(params,f,indent=4)
+
 
     #save the matrices
     os.makedirs(model_dir,exist_ok=True)
