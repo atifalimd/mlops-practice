@@ -34,3 +34,4 @@ all the changes will be updated in dvc.lock file for stage-01
 5. define stage -01(spit_data) and run using command dvc repro
 all the changes wiil be updated in dvc.lock file for stage-02
 6. define stage -03(train_evaluate) and run using command dvc repro
+all the changes wiil be updated in dvc.lock file for stage-03
