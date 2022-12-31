@@ -2,13 +2,12 @@ import os
 
 # required directories
 dirs =[
-    os.path.join("data","raw"), # data is directory and raw is folder
-    os.path.join("data","processed"), # data is directory and processed is folder
+    "Data_given", # get the data from the cloud or resouce or import dataset
+    os.path.join("data","raw"), # data is directory and raw is folder, save preprocess data
+    os.path.join("data","processed"),# data is directory and processed is folder,split&save train test data
     "notebooks", # notebook is directory
     "saved_models", # saved_model is directory
-    "src",# src is directory
-    "Data_given" # get the data from the cloud or resouce
-
+    "src" # src is directory and make a separate file for every step performed 
 ]
 
 # add required directories to the project

@@ -9,7 +9,7 @@ Add all the required libraries and install them using command
 pip install -r requirements.txt
 
 3. Create template.py
-In template.py create required directories and required files of the project
+In template.py create required directories and files for the project
 
 4. Dataset loaded at data_given directory manually
 
@@ -33,17 +33,17 @@ Define all the parameters to run this project
 3. create load_data.py in src dir
 
 4. dvc.yaml file
-   define stage -01(load_dataset) and run using command dvc repro
-   all the changes will be updated in dvc.lock file for stage-01
+   1. define stage -01(load_dataset) and run using command dvc repro
+      all the changes will be updated in dvc.lock file for stage-01
 
-5. define stage -01(spit_data) and run using command dvc repro
-   all the changes wiil be updated in dvc.lock file for stage-02
+   2. define stage -01(spit_data) and run using command dvc repro
+      all the changes wiil be updated in dvc.lock file for stage-02
    
-6. define stage -03(train_evaluate) and run using command dvc repro
-   all the changes wiil be updated in dvc.lock file for stage-03
-   change parameters in params.yaml and test accuracy again
-   to see the chnages and effects in previous and current parameters 
-   run comman dvc metrics diff
-   to see all metrices 
-   run command dvc metrics show
+   3. define stage -03(train_evaluate) and run using command dvc repro
+      all the changes wiil be updated in dvc.lock file for stage-03
+      change parameters in params.yaml and test accuracy again
+      to see the chnages and effects in previous and current parameters 
+      run comman dvc metrics diff
+      to see all metrices 
+      run command dvc metrics show
 
