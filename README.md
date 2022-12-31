@@ -30,6 +30,7 @@ Define all the parameters to run this project
 3. create load_data.py in src dir
 4. dvc.yaml file
 define stage -01(load_dataset) and run using command dvc repro
-all the changes will be updated in dvc.lock file
-5. create split_data.py for stage-02
-
+all the changes will be updated in dvc.lock file for stage-01
+5. define stage -01(spit_data) and run using command dvc repro
+all the changes wiil be updated in dvc.lock file for stage-02
+6. define stage -03(train_evaluate) and run using command dvc repro
