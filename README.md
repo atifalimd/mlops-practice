@@ -48,10 +48,10 @@ Define all the parameters to run this project
       run command dvc metrics show
 5. create tox.ini
    1. it is used to automate testing in python.
-   2. it will create virtual enviornment for the project. adv of tox is list of venv's can be given and test  to confirm whether code is running on multiple venv's
+   2. it will create virtual enviornment for the project and install dependencies. adv of tox is list of venv's can be given and test  to confirm whether code is running on multiple venv's
    run command for tox is 'tox'
    3. rebuilding : run command is tox -r if we update requirements.txt 
-   4. run command for pytest is pytest -v
+   4. run command for pytest is pytest -v(v for verborse)
 6. tests folder is created to put all the tests in one place
    1. inside test folder create conftest.py
    2. inside test folder create test_config.py
@@ -63,3 +63,11 @@ Define all the parameters to run this project
    install packages from local directories(src).All the packaged created in get_data,load_data, split_data, train_evaluate
    run command for setup
    pip install -e .
+
+jupter notebook:
+pip install jupyterlab
+run command jupyter-lab notebooks/
+
+7. create app.py file
+
+8. Create webapp folder
