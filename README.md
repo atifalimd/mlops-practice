@@ -58,5 +58,8 @@ Define all the parameters to run this project
    3. inside test folder create __init__.py
    after saving tests inside tests folder run pytest using command pytest -v or by using tox can also be tested
 
-6. create setup.py file for creating packages
+6. create setup.py file for creating our own packages
+   command : python setup.py sdist bdist wheel
    install packages from local directories(src).All the packaged created in get_data,load_data, split_data, train_evaluate
+   run command for setup
+   pip install -e .
