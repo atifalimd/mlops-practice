@@ -73,3 +73,11 @@ run command jupyter-lab notebooks/
 8. Create webapp folder
 
 9. Create Procfile for deploying app using Heroku
+
+10. Create artifacts folder
+
+11. mlflow server command
+mlflow server \
+   --backend-store-uri sqlite:///mlflow.db \
+   --default-artifact-root ./artifacts \
+   --host 0.0.0.0 -p 1234
