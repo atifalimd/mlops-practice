@@ -71,3 +71,5 @@ run command jupyter-lab notebooks/
 7. create app.py file
 
 8. Create webapp folder
+
+9. Create Procfile for deploying app using Heroku
