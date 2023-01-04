@@ -43,26 +43,35 @@ Define all the parameters to run this project
       all the changes wiil be updated in dvc.lock file for stage-03
       change parameters in params.yaml and test accuracy again
       to see the chnages and effects in previous and current parameters 
-      run comman dvc metrics diff
+      run command dvc metrics diff
       to see all metrices 
       run command dvc metrics show
 5. create tox.ini
    1. it is used to automate testing in python.
-   2. it will create virtual enviornment for the project and install dependencies. adv of tox is list of venv's can be given and test  to confirm whether code is running on multiple venv's
-   run command for tox is 'tox'
-   3. rebuilding : run command is tox -r if we update requirements.txt 
-   4. run command for pytest is pytest -v(v for verborse)
+   2. it will create virtual enviornment for the project and install dependencies. 
+      adv of tox is list of venv's can be given
+   3. it has command to run pytest (used to run and test 
+      files inside tests directories)
+   4. it also has requirements.txt as dependency to create venv
+   5. test  to confirm whether code is running on multiple venv's
+      run command for tox is 'tox'.
+   6. rebuilding : run command is tox -r if we update requirements.txt 
+   7. run command for pytest is pytest -v(v for verborse)
 6. tests folder is created to put all the tests in one place
    1. inside test folder create conftest.py
    2. inside test folder create test_config.py
    3. inside test folder create __init__.py
+   pytest is used for run and test, tests(conftest,test_config) saved inside tests folder
    after saving tests inside tests folder run pytest using command pytest -v or by using tox can also be tested
 
 6. create setup.py file for creating our own packages
-   command : python setup.py sdist bdist wheel
-   install packages from local directories(src).All the packaged created in get_data,load_data, split_data, train_evaluate
-   run command for setup
-   pip install -e .
+   1. at setup.py by default we have to give some details regarding project such as 
+      folder, version, description, author, License and many other.
+   2. using command pip install -e . to install libraries mention in local directories 
+      (by now there are  only two directories which has libraries install src and test) 
+      will collect and installed
+   3. If needed only 
+      command : python setup.py sdist bdist wheel(If needed only, It will add all the packages dist directory and .tar.gz file inside and if needed can share with friends to install all the libraries)
 
 jupter notebook:
 pip install jupyterlab

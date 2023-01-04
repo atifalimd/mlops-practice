@@ -16,7 +16,7 @@ import argparse
 import joblib
 import json
 import mlflow
-import google
+import google.protobuf
 
 
 def eval_metrics(actual,pred):
