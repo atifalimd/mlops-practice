@@ -3,6 +3,7 @@ import os
 import numpy as np
 from prediction_service import prediction
 
+params_path = "params.yaml"
 webapp_root = "webapp"
 static_dir = os.path.join(webapp_root,"static")
 temp_dir = os.path.join(webapp_root,"templates")

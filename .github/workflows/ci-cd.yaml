@@ -1,13 +1,19 @@
+# It is a workflow file for github actions
+# all the steps performed in local, will now help to perform at GitHub Actions
+
 name: Python application
 
+# when push or pull is done on the main branch then only this action runs
+# until then there wont be any kind of action happens
+
 on:
-  push:
+  push: 
     branches:
-    - main
+    - main #(brach name)
   pull_request:
     branches:
-    - main
-
+    - main #(Branch name)
+# once push or pull command is run then step by step all stages of jobs will run
 jobs:
   build:
 
@@ -24,8 +30,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+ #       pip install flake8 pytest #(it is already in requirements.txt)
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi #bash coding syntax(starts
+        # with "if", condition given and then end using "fi")
     #- name: Lint with flake8
     #  run: |
         # stop the build if there are Python syntax errors or undefined names

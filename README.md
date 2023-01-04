@@ -72,14 +72,25 @@ Define all the parameters to run this project
       will collect and installed
    3. If needed only 
       command : python setup.py sdist bdist wheel(If needed only, It will add all the packages dist directory and .tar.gz file inside and if needed can share with friends to install all the libraries)
+7. Create directory by name prediction_service and create another directory 
+   by name model and create files inside prediction_service prediction.py and __init__.py 
 
-jupter notebook:
-pip install jupyterlab
-run command jupyter-lab notebooks/
+8. Create app.py file for all the flask functions
 
-7. create app.py file
+8. Create webapp directory 
+   1. Create static folder
+      1. Create css and script files
+         1. inside css create main.css file
+         2. inside script file create index.js file
+   2. Create template folder for all the html files
+      1. base.html
+      2. index.html
+      3. 404.html
 
-8. Create webapp folder
+9. Create .github directory
+   1. inside directory create folder workflows
+   2. inside .github add ci-cd.yaml file
+
 
 9. Create Procfile for deploying app using Heroku
 
@@ -90,3 +101,8 @@ mlflow server \
    --backend-store-uri sqlite:///mlflow.db \
    --default-artifact-root ./artifacts \
    --host 0.0.0.0 -p 1234
+
+
+jupter notebook:
+pip install jupyterlab
+run command jupyter-lab notebooks/
