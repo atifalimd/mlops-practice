@@ -5,13 +5,13 @@ import json
 import numpy as np
 
 params_path = "params.yaml"
-schema_path = os.path.join("prediction_service","schema_in.json")
+schema_path = os.path.join("prediction_service","schema_in.json") #maximum and minimum value is available
 
 
 class NotInRange(Exception):
     def __init__(self, message='Value not in range'):
         self.message = message
-        super().__init__(self.message)
+        super().__init__(self.message) # to print message
 
 class NotInCols(Exception):
     def __init__(self, message='Not in columns'):
@@ -30,7 +30,7 @@ def predict(data):
     model = joblib.load(model_dir_path)
     prediction = model.predict(data).to_list()[0]
     try:
-        if 3<= prediction <=8:
+        if 3<= prediction <=8: # target column ranges between 3 and 8
             return prediction
         else:
             raise NotInRange
@@ -58,20 +58,19 @@ def validate_input(dict_request):
     for col,val in dict_request.items():
         validate_cols(col)
         validate_values(col, val)
-    return True
-
-        
+    return True 
 
 def form_response(dict_request):
-    if validate_input(dict_request):
+    if validate_input(dict_request):#validating ranges if true return response
         data = dict_request.values()
         data = [list(map(float,data))]
         response = predict(data)
         return response
+    # if error occurs will be caught in app.py
 
-def api_response(dict_request):
+def api_response(dict_request):#it takes request.json from app.py and passed to api_response as fn parameter
     try:
-        if validate_input(dict_request):
+        if validate_input(dict_request): #validating ranges if true return response
             data = np.array([list(dict_request.values())])
             response = predict(data)
             response = {"response":response}

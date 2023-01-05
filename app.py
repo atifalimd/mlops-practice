@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import os
 import numpy as np
-from prediction_service import prediction
+from prediction_service import prediction # need few methods from prediction_service\prediction
 
 params_path = "params.yaml"
 webapp_root = "webapp"
@@ -17,10 +17,10 @@ def index():
         try:
             if request.form:
                 data_req = dict(request.form)
-                response = prediction.form_response(data_req)
+                response = prediction.form_response(data_req) # calling method form_response from prediction.py
                 return render_template("index.html", response=response)
             elif request.json:
-                response = prediction.api_response(request.json)
+                response = prediction.api_response(request.json)# request.json is in dict format
                 return jsonify(response)
         except Exception as e:
             print(e)

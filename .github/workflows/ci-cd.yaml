@@ -1,5 +1,5 @@
 # It is a workflow file for github actions
-# all the steps performed in local, will now help to perform at GitHub Actions
+# all the steps performed in local, will now perform at GitHub Actions
 
 name: Python application
 
